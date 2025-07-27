@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main()
+{
+    int contador = 1, divisionResiduo = 0, numero;
+
+    printf("Ingrese un numero: \n");
+    scanf("%d", &numero);
+
+    while (contador <= numero)
+    {
+        if (numero % contador == 0) {
+            divisionResiduo++;
+        }
+        contador++;
+    }
+
+    if (divisionResiduo == 2)
+    {
+        printf("El numero que ingresaste es primo: %d", numero);
+    }
+    else
+    {
+        printf("El numero que ingresaste no es primo: %d", numero);
+    }
+    
+    
+}
