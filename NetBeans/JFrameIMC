@@ -1,0 +1,14 @@
+    private void jptmCalcularActionPerformed(java.awt.event.ActionEvent evt) {                                             
+        // TODO add your handling code here:
+        String p = jtfPeso.getText(); //Metodo para obtener el peso
+        String a = jtfAltura.getText(); //Metodo para obtener la altura
+        
+        Persona miPersona = new Persona(); //Instancia de la Clase persona
+        miPersona.setPeso(Float.parseFloat(p)); //Se castea para que se convierta en Float
+        miPersona.setAltura(Float.parseFloat(a));
+        JOptionPane.showMessageDialog(null,"IMC: " + miPersona.getImc());
+        miPersona.mostrarCategoria();
+        
+        jtfPeso.setText("");
+        jtfAltura.setText("");
+    }                                            
